@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup Label="SDK Versions">
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Package Versions">
+        <SwashbuckleAspNetCoreVersion>6.2.3</SwashbuckleAspNetCoreVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Label="Test Packages">
+    </PropertyGroup>
+</Project>
