@@ -14,12 +14,12 @@ namespace Catalog.API.Repositories
             this.context = Guard.Against.Null(context, nameof(context));
         }
 
-        public async Task CreateProduct(Product product)
+        public async Task CreateProductAsync(Product product)
         {
             await this.context.Products.InsertOneAsync(product);
         }
 
-        public async Task<bool> DeleteProduct(string id)
+        public async Task<bool> DeleteProductAsync(string id)
         {
             var filter = Builders<Product>.Filter.Eq(p => p.Id, id);
 
@@ -30,7 +30,7 @@ namespace Catalog.API.Repositories
                 && deleteResult.DeletedCount > 0;
         }
 
-        public async Task<IEnumerable<Product>> GetProductByCategory(string category)
+        public async Task<IEnumerable<Product>> GetProductByCategoryAsync(string category)
         {
             var filter = Builders<Product>.Filter.ElemMatch(p => p.Category, category);
 
@@ -39,14 +39,14 @@ namespace Catalog.API.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Product> GetProductById(string id)
+        public async Task<Product> GetProductByIdAsync(string id)
         {
             return await this.context.Products
                 .Find(p => p.Id == id)
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProductByName(string name)
+        public async Task<IEnumerable<Product>> GetProductByNameAsync(string name)
         {
             var filter = Builders<Product>.Filter.ElemMatch(p => p.Name, name);
 
@@ -55,14 +55,14 @@ namespace Catalog.API.Repositories
                 .ToListAsync();
         }
 
-        public async Task<IEnumerable<Product>> GetProducts()
+        public async Task<IEnumerable<Product>> GetProductsAsync()
         {
             return await this.context.Products
                 .Find(p => true)
                 .ToListAsync();
         }
 
-        public async Task<bool> UpdateProduct(Product product)
+        public async Task<bool> UpdateProductAsync(Product product)
         {
             var updateResult = await this.context.Products
                 .ReplaceOneAsync(filter: g => g.Id == product.Id, replacement: product);
