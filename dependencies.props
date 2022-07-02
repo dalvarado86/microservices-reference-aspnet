@@ -4,7 +4,9 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Package Versions">
-        <SwashbuckleAspNetCoreVersion>6.2.3</SwashbuckleAspNetCoreVersion>
+        <ArdalisGuardClausesVersion>4.0.1</ArdalisGuardClausesVersion>
+        <MongoDBDriverVersion>2.16.1</MongoDBDriverVersion>
+        <SwashbuckleAspNetCoreVersion>6.3.1</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
 
     <PropertyGroup Label="Test Packages">
