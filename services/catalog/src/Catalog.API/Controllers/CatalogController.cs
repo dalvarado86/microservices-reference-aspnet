@@ -34,12 +34,12 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Product>> GetProductByIdAsync(string id)
         {
-            this.logger.LogInformation("Looking for product by id.", new { ProductId = id });
+            this.logger.LogInformation($"Looking for product by Id: {id}");
             var product = await this.productRepository.GetProductByIdAsync(id);
 
             if (product == null)
             {
-                this.logger.LogError("Product not found.", new { ProductId = id });
+                this.logger.LogError($"Product not found. Id: {id}");
                 return NotFound();
             }
 
@@ -51,7 +51,7 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Product>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Product>>> GetProductByCategoryAsync(string category)
         {
-            this.logger.LogInformation("Looking for product by category.", new { Category = category });
+            this.logger.LogInformation($"Looking for product by Category: {category}.");
             var products = await this.productRepository.GetProductByCategoryAsync(category);
             return Ok(products);
         }
@@ -78,7 +78,7 @@ namespace Catalog.API.Controllers
         [ProducesResponseType(typeof(Product), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> DeleteProductAsync(string id)
         {
-            this.logger.LogInformation("Deleting product by id.", new { Id = id });
+            this.logger.LogInformation($"Deleting product by Id: {id} .");
             return Ok(await this.productRepository.DeleteProductAsync(id));
         }
     }
