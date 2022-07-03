@@ -32,7 +32,7 @@ namespace Catalog.API.Repositories
 
         public async Task<IEnumerable<Product>> GetProductByCategoryAsync(string category)
         {
-            var filter = Builders<Product>.Filter.ElemMatch(p => p.Category, category);
+            var filter = Builders<Product>.Filter.Eq(p => p.Category, category);
 
             return await this.context.Products
                 .Find(filter)
