@@ -5,6 +5,7 @@
 
     <PropertyGroup Label="Package Versions">
         <ArdalisGuardClausesVersion>4.0.1</ArdalisGuardClausesVersion>
+        <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.6</MicrosoftExtensionsCachingStackExchangeRedisVersion>
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.16.1</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
         <MongoDBDriverVersion>2.16.1</MongoDBDriverVersion>
         <SwashbuckleAspNetCoreVersion>6.3.1</SwashbuckleAspNetCoreVersion>
