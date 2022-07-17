@@ -6,6 +6,11 @@ using System.Net;
 
 namespace Catalog.API.Controllers
 {
+    // TODO: Enhance routes and status reponses with best practices
+    // TODO: Validate against null arguments
+    // TODO: Improve logs
+    // TODO: Handle api errors
+
     [ApiController]
     [Route("api/v1/[controller]")]
     public class CatalogController : ControllerBase

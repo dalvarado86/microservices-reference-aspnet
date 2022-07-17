@@ -5,6 +5,8 @@ using System.Text.Json;
 
 namespace Basket.API.Repositories
 {
+    // TODO: Add logger
+
     public class BasketRepository : IBasketRepository
     {
         private readonly IDistributedCache distributedCache;
