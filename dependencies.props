@@ -6,6 +6,7 @@
     <PropertyGroup Label="Package Versions">
         <ArdalisGuardClausesVersion>4.0.1</ArdalisGuardClausesVersion>
         <DapperVersion>2.0.123</DapperVersion>
+        <GrpcAspNetCoreVersion>2.47.0</GrpcAspNetCoreVersion>
         <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.6</MicrosoftExtensionsCachingStackExchangeRedisVersion>
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.16.1</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
         <MongoDBDriverVersion>2.16.1</MongoDBDriverVersion>
