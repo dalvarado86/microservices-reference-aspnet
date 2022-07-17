@@ -1,4 +1,4 @@
-﻿using Discount.API.Repositories;
+﻿using Discount.Common.Repositories;
 
 namespace Discount.API
 {

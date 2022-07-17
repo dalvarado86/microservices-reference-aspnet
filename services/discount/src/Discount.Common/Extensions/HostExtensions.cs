@@ -1,6 +1,10 @@
-﻿using Npgsql;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Npgsql;
 
-namespace Discount.API.Extensions
+namespace Discount.Common.Extensions
 {
     public static class HostExtensions
     {
@@ -18,7 +22,7 @@ namespace Discount.API.Extensions
                 {
                     logger.LogInformation("Migrating postresql database...");
 
-                    using var connection = new NpgsqlConnection(configuration.GetValue<string>("DatabaseSettings:ConnectionString"));
+                    using var connection = new NpgsqlConnection(configuration["DatabaseSettings:ConnectionString"]);
                     connection.Open();
 
                     using var command = new NpgsqlCommand

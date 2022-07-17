@@ -1,4 +1,4 @@
-using Discount.API.Extensions;
+using Discount.Common.Extensions;
 
 namespace Discount.API
 {
