@@ -31,11 +31,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{06403847
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "discount", "discount", "{E787481B-5EC9-4305-8370-398934C1F7FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.API", "services\discount\src\Discount.API\Discount.API.csproj", "{62D6EAB1-364F-4745-8FDA-84FA970E237B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.API", "services\discount\src\Discount.API\Discount.API.csproj", "{62D6EAB1-364F-4745-8FDA-84FA970E237B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Grpc", "services\discount\src\Discount.Grpc\Discount.Grpc.csproj", "{91A4FED4-4BFD-4E12-9F65-62869A53DE96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Grpc", "services\discount\src\Discount.Grpc\Discount.Grpc.csproj", "{91A4FED4-4BFD-4E12-9F65-62869A53DE96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discount.Common", "services\discount\src\Discount.Common\Discount.Common.csproj", "{C31FD50A-DF4A-42A9-A369-0B0CDB9950C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Discount.Common", "services\discount\src\Discount.Common\Discount.Common.csproj", "{C31FD50A-DF4A-42A9-A369-0B0CDB9950C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

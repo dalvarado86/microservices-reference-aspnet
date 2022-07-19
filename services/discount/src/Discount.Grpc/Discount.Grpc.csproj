@@ -7,13 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="$(AutoMapperExtensionsMicrosoftDependencyInjectionVersion)" />
     <PackageReference Include="Grpc.AspNetCore" Version="$(GrpcAspNetCoreVersion)" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Protobuf Include="Protos\discount.proto" GrpcServices="Server" />
+  </ItemGroup>
+  
   <ItemGroup>
     <ProjectReference Include="..\Discount.Common\Discount.Common.csproj" />
   </ItemGroup>

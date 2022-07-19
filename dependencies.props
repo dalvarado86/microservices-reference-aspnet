@@ -4,6 +4,7 @@
     </PropertyGroup>
 
     <PropertyGroup Label="Package Versions">
+        <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>11.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
         <ArdalisGuardClausesVersion>4.0.1</ArdalisGuardClausesVersion>
         <DapperVersion>2.0.123</DapperVersion>
         <GrpcAspNetCoreVersion>2.47.0</GrpcAspNetCoreVersion>
