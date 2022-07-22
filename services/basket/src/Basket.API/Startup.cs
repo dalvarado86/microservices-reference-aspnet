@@ -1,4 +1,5 @@
 ﻿using Basket.API.Repositories;
+using Commons.Exceptions;
 
 namespace Basket.API
 {
@@ -6,12 +7,13 @@ namespace Basket.API
     {
         private const string RedisConnectionStringEnv = "CacheSettings:ConnectionString";
 
+        private readonly IConfiguration configuration;
+
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.configuration = configuration ?? throw new ArgumentNullException(nameof(configuration));
         }
 
-        public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -19,7 +21,7 @@ namespace Basket.API
             // Redis Configuration
             services.AddStackExchangeRedisCache(options =>
             {
-                options.Configuration = Configuration.GetValue<string>(RedisConnectionStringEnv);
+                options.Configuration = this.configuration.GetValue<string>(RedisConnectionStringEnv);
             });
 
             services.AddScoped<IBasketRepository, BasketRepository>();
@@ -31,9 +33,10 @@ namespace Basket.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseMiddleware<ExceptionMiddleware>();
+
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Basket.API v1"));
             }

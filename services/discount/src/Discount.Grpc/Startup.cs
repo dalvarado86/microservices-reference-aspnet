@@ -1,4 +1,5 @@
-﻿using Discount.Common.Repositories;
+﻿using Commons.Exceptions;
+using Discount.Common.Repositories;
 using Discount.Grpc.Services;
 
 namespace Discount.Grpc
@@ -17,10 +18,7 @@ namespace Discount.Grpc
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            app.UseMiddleware<ExceptionMiddleware>();
 
             app.UseRouting();
 
