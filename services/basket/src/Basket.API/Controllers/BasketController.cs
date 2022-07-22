@@ -1,18 +1,12 @@
-﻿using Ardalis.GuardClauses;
-using Basket.API.Entities;
+﻿using Basket.API.Entities;
 using Basket.API.Repositories;
+using Commons.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Basket.API.Controllers
 {
-    // TODO: Enhance routes and status reponses with best practices
-    // TODO: Validate against null arguments
-    // TODO: Handle api errors
-
-    [ApiController]
-    [Route("api/v1/[controller]")]
-    public class BasketController : ControllerBase
+    public class BasketController : BaseApiController
     {
         private readonly ILogger<BasketController> logger;
         private readonly IBasketRepository basketRepository;
@@ -21,11 +15,11 @@ namespace Basket.API.Controllers
             IBasketRepository basketRepository,
             ILogger<BasketController> logger)
         {
-            this.basketRepository = Guard.Against.Null(basketRepository, nameof(basketRepository));
-            this.logger = Guard.Against.Null(logger, nameof(logger));
+            this.basketRepository = basketRepository ?? throw new ArgumentNullException(nameof(basketRepository));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
-        [HttpGet("{userName}", Name = "GetBasketAsync")]
+        [HttpGet("{username}")]
         [ProducesResponseType(typeof(ShoppingCart), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<ShoppingCart>> GetBasketAsync(string userName)
         {

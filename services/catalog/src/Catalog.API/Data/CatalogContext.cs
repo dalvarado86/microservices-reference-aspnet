@@ -1,5 +1,4 @@
-﻿using Ardalis.GuardClauses;
-using Catalog.API.Entities;
+﻿using Catalog.API.Entities;
 using MongoDB.Driver;
 
 namespace Catalog.API.Data
@@ -12,7 +11,10 @@ namespace Catalog.API.Data
 
         public CatalogContext(IConfiguration configuration)
         {
-            Guard.Against.Null(configuration);
+            if (configuration is null)
+            {
+                throw new ArgumentNullException(nameof(configuration));
+            }
 
             var connectionString = configuration.GetValue<string>(ConnectionStringEnv);
             var client = new MongoClient(connectionString);

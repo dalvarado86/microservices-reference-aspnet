@@ -1,19 +1,12 @@
-﻿using Ardalis.GuardClauses;
-using Catalog.API.Entities;
+﻿using Catalog.API.Entities;
 using Catalog.API.Repositories;
+using Commons.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Catalog.API.Controllers
 {
-    // TODO: Enhance routes and status reponses with best practices
-    // TODO: Validate against null arguments
-    // TODO: Improve logs
-    // TODO: Handle api errors
-
-    [ApiController]
-    [Route("api/v1/[controller]")]
-    public class CatalogController : ControllerBase
+    public class CatalogController : BaseApiController
     {
         private readonly IProductRepository productRepository;
         private readonly ILogger<CatalogController> logger;
@@ -22,8 +15,8 @@ namespace Catalog.API.Controllers
             IProductRepository productRepository,
             ILogger<CatalogController> logger)
         {
-            this.productRepository = Guard.Against.Null(productRepository, nameof(productRepository));
-            this.logger = Guard.Against.Null(logger, nameof(logger));
+            this.productRepository = productRepository ?? throw new ArgumentNullException(nameof(productRepository));
+            this.logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         [HttpGet]

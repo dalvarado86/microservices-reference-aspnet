@@ -1,17 +1,12 @@
-﻿using Discount.Common.Entities;
+﻿using Commons.Controllers;
+using Discount.Common.Entities;
 using Discount.Common.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Discount.API.Controllers
 {
-    // TODO: Enhance routes and status reponses with best practices
-    // TODO: Validate against null arguments
-    // TODO: Handle api errors
-
-    [ApiController]
-    [Route("api/v1/[controller]")]
-    public class DiscountController : ControllerBase
+    public class DiscountController : BaseApiController
     {
         private readonly IDiscountRepository discountRepository;
 

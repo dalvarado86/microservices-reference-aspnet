@@ -1,5 +1,4 @@
-﻿using Ardalis.GuardClauses;
-using Catalog.API.Data;
+﻿using Catalog.API.Data;
 using Catalog.API.Entities;
 using MongoDB.Driver;
 
@@ -11,7 +10,7 @@ namespace Catalog.API.Repositories
 
         public ProductRepository(ICatalogContext context)
         {
-            this.context = Guard.Against.Null(context, nameof(context));
+            this.context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
         public async Task CreateProductAsync(Product product)

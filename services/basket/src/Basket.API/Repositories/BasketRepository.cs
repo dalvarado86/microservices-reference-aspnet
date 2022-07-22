@@ -1,5 +1,4 @@
-﻿using Ardalis.GuardClauses;
-using Basket.API.Entities;
+﻿using Basket.API.Entities;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 
@@ -13,7 +12,7 @@ namespace Basket.API.Repositories
 
         public BasketRepository(IDistributedCache distributedCache)
         {
-            this.distributedCache = Guard.Against.Null(distributedCache, nameof(distributedCache));
+            this.distributedCache = distributedCache ?? throw new ArgumentNullException(nameof(distributedCache));
         }
 
         public async Task DeleteBasketAsync(string userName)
