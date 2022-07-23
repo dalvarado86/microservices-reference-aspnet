@@ -16,7 +16,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\..\common\src\Common\Commons.csproj" />
     <ProjectReference Include="..\Discount.Common\Discount.Common.csproj" />
   </ItemGroup>
 

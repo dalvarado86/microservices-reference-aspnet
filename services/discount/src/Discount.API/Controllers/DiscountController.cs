@@ -1,12 +1,13 @@
-﻿using Commons.Controllers;
-using Discount.Common.Entities;
+﻿using Discount.Common.Entities;
 using Discount.Common.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Discount.API.Controllers
 {
-    public class DiscountController : BaseApiController
+    [ApiController]
+    [Route("api/v1/[controller]")]
+    public class DiscountController : ControllerBase
     {
         private readonly IDiscountRepository discountRepository;
 

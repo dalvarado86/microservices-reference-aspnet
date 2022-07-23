@@ -9,14 +9,14 @@
         <GrpcAspNetCoreVersion>2.47.0</GrpcAspNetCoreVersion>
         <MacrossJsonExtensionsVersion>3.0.0</MacrossJsonExtensionsVersion>
         <MicrosoftAspNetCoreHttpAbstractionsVersion>2.2.0</MicrosoftAspNetCoreHttpAbstractionsVersion>
-        <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.6</MicrosoftExtensionsCachingStackExchangeRedisVersion>
+        <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.7</MicrosoftExtensionsCachingStackExchangeRedisVersion>
         <MicrosoftExtensionsHostingAbstractionsVersion>6.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
         <MicrosoftExtensionsLoggingAbstractionsVersion>6.0.1</MicrosoftExtensionsLoggingAbstractionsVersion>
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.16.1</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
         <MongoDBDriverVersion>2.16.1</MongoDBDriverVersion>
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
         <NpgsqlVersion>6.0.5</NpgsqlVersion>
-        <SwashbuckleAspNetCoreVersion>6.3.1</SwashbuckleAspNetCoreVersion>
+        <SwashbuckleAspNetCoreVersion>6.4.0</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
 
     <PropertyGroup Label="Test Packages">

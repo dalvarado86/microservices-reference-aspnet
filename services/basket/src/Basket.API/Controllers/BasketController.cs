@@ -1,12 +1,13 @@
 ﻿using Basket.API.Entities;
 using Basket.API.Repositories;
-using Commons.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Basket.API.Controllers
 {
-    public class BasketController : BaseApiController
+    [ApiController]
+    [Route("api/v1/[controller]")]
+    public class BasketController : ControllerBase
     {
         private readonly ILogger<BasketController> logger;
         private readonly IBasketRepository basketRepository;

@@ -17,6 +17,7 @@ csharp_style_expression_bodied_accessors = true:silent
 csharp_style_expression_bodied_lambdas = true:silent
 csharp_style_expression_bodied_local_functions = false:silent
 csharp_space_around_binary_operators = before_and_after
+csharp_style_prefer_method_group_conversion = true:silent
 
 [*.{cs,csproj}]
 end_of_line = crlf

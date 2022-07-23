@@ -1,5 +1,4 @@
-﻿using Commons.Exceptions;
-using Discount.Common.Repositories;
+﻿using Discount.Common.Repositories;
 
 namespace Discount.API
 {
@@ -24,10 +23,9 @@ namespace Discount.API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseMiddleware<ExceptionMiddleware>();
-
             if (env.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Discount.API v1"));
             }

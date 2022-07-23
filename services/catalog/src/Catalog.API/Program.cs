@@ -1,6 +1,5 @@
 using Catalog.API.Data;
 using Catalog.API.Repositories;
-using Commons.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +18,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseMiddleware<ExceptionMiddleware>();
+    app.UseDeveloperExceptionPage();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

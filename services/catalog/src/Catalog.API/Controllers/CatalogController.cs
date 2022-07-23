@@ -1,12 +1,13 @@
 ﻿using Catalog.API.Entities;
 using Catalog.API.Repositories;
-using Commons.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
 namespace Catalog.API.Controllers
 {
-    public class CatalogController : BaseApiController
+    [ApiController]
+    [Route("api/v1/[controller]")]
+    public class CatalogController : ControllerBase
     {
         private readonly IProductRepository productRepository;
         private readonly ILogger<CatalogController> logger;
