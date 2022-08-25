@@ -4,8 +4,6 @@ using System.Text.Json;
 
 namespace Basket.API.Repositories
 {
-    // TODO: Add logger
-
     public class BasketRepository : IBasketRepository
     {
         private readonly IDistributedCache distributedCache;
@@ -15,9 +13,9 @@ namespace Basket.API.Repositories
             this.distributedCache = distributedCache ?? throw new ArgumentNullException(nameof(distributedCache));
         }
 
-        public async Task DeleteBasketAsync(string userName)
+        public async Task DeleteBasketAsync(string userName, CancellationToken cancellationToken = default)
         {
-            await this.distributedCache.RemoveAsync(userName);
+            await this.distributedCache.RemoveAsync(userName, cancellationToken);
         }
 
         public async Task<ShoppingCart?> GetBasketAsync(string userName)
