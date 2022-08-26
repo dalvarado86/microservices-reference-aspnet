@@ -6,13 +6,13 @@
     <PropertyGroup Label="Package Versions">
         <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>11.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
         <DapperVersion>2.0.123</DapperVersion>
-        <GrpcAspNetCoreVersion>2.47.0</GrpcAspNetCoreVersion>
+        <GrpcAspNetCoreVersion>2.48.0</GrpcAspNetCoreVersion>
         <MacrossJsonExtensionsVersion>3.0.0</MacrossJsonExtensionsVersion>
         <MicrosoftAspNetCoreHttpAbstractionsVersion>2.2.0</MicrosoftAspNetCoreHttpAbstractionsVersion>
-        <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.7</MicrosoftExtensionsCachingStackExchangeRedisVersion>
+        <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.8</MicrosoftExtensionsCachingStackExchangeRedisVersion>
         <MicrosoftExtensionsHostingAbstractionsVersion>6.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
         <MicrosoftExtensionsLoggingAbstractionsVersion>6.0.1</MicrosoftExtensionsLoggingAbstractionsVersion>
-        <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.16.1</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
+        <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.17.0</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
         <MongoDBDriverVersion>2.16.1</MongoDBDriverVersion>
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
         <NpgsqlVersion>6.0.5</NpgsqlVersion>
