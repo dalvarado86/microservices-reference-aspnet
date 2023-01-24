@@ -1,31 +1,31 @@
 <Project>
     <PropertyGroup Label="SDK Versions">
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup Label="Package Versions">
-        <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>11.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
+        <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>12.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
         <DapperVersion>2.0.123</DapperVersion>
-        <GrpcAspNetCoreVersion>2.48.0</GrpcAspNetCoreVersion>
+        <GrpcAspNetCoreVersion>2.51.0</GrpcAspNetCoreVersion>
         <MacrossJsonExtensionsVersion>3.0.0</MacrossJsonExtensionsVersion>
         <MicrosoftAspNetCoreHttpAbstractionsVersion>2.2.0</MicrosoftAspNetCoreHttpAbstractionsVersion>
-        <MicrosoftExtensionsCachingStackExchangeRedisVersion>6.0.8</MicrosoftExtensionsCachingStackExchangeRedisVersion>
-        <MicrosoftExtensionsHostingAbstractionsVersion>6.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
-        <MicrosoftExtensionsLoggingAbstractionsVersion>6.0.1</MicrosoftExtensionsLoggingAbstractionsVersion>
+        <MicrosoftExtensionsCachingStackExchangeRedisVersion>7.0.2</MicrosoftExtensionsCachingStackExchangeRedisVersion>
+        <MicrosoftExtensionsHostingAbstractionsVersion>7.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
+        <MicrosoftExtensionsLoggingAbstractionsVersion>7.0.0</MicrosoftExtensionsLoggingAbstractionsVersion>
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.17.0</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
-        <MongoDBDriverVersion>2.16.1</MongoDBDriverVersion>
+        <MongoDBDriverVersion>2.18.0</MongoDBDriverVersion>
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
-        <NpgsqlVersion>6.0.5</NpgsqlVersion>
-        <SwashbuckleAspNetCoreVersion>6.4.0</SwashbuckleAspNetCoreVersion>
+        <NpgsqlVersion>7.0.1</NpgsqlVersion>
+        <SwashbuckleAspNetCoreVersion>6.5.0</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
 
     <PropertyGroup Label="Test Packages">
-        <CoverletCollectorVersion>3.1.2</CoverletCollectorVersion>
-        <FluentAssertionsVersion>6.5.1</FluentAssertionsVersion>
-        <MicrosoftNETTestSdkVersion>17.2.0</MicrosoftNETTestSdkVersion>
-        <MoqVersion>4.18.1</MoqVersion>
+        <CoverletCollectorVersion>3.2.0</CoverletCollectorVersion>
+        <FluentAssertionsVersion>6.9.0</FluentAssertionsVersion>
+        <MicrosoftNETTestSdkVersion>17.4.1</MicrosoftNETTestSdkVersion>
+        <MoqVersion>4.18.4</MoqVersion>
         <NUnitVersion>3.13.3</NUnitVersion>
-        <NUnit3TestAdapterVersion>4.2.1</NUnit3TestAdapterVersion>
-        <NUnitAnalyzersVersion>3.3.0</NUnitAnalyzersVersion>
+        <NUnit3TestAdapterVersion>4.3.1</NUnit3TestAdapterVersion>
+        <NUnitAnalyzersVersion>3.5.0</NUnitAnalyzersVersion>
     </PropertyGroup>
 </Project>
