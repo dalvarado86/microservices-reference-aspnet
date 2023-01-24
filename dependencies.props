@@ -1,8 +1,4 @@
 <Project>
-    <PropertyGroup Label="SDK Versions">
-        <TargetFramework>net7.0</TargetFramework>
-    </PropertyGroup>
-
     <PropertyGroup Label="Package Versions">
         <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>12.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
         <DapperVersion>2.0.123</DapperVersion>
