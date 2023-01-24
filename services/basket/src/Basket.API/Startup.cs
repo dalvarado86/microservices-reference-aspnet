@@ -1,10 +1,13 @@
 ﻿using Basket.API.Repositories;
+using Basket.API.Services;
+using Discount.Grpc.Protos;
 
 namespace Basket.API
 {
     public class Startup
     {
         private const string RedisConnectionStringEnv = "CacheSettings:ConnectionString";
+        private const string DiscountGrpcUrlEnv = "GrpcSettings:DiscountUrl";
 
         private readonly IConfiguration configuration;
 
@@ -23,7 +26,18 @@ namespace Basket.API
                 options.Configuration = this.configuration.GetValue<string>(RedisConnectionStringEnv);
             });
 
+            var grpcDiscountUrl = this.configuration["GrpcSettings:DiscountUrl"];
+
+            if (string.IsNullOrEmpty(grpcDiscountUrl))
+            {
+                // TODO: Validates with a regex http pattern.
+                throw new InvalidOperationException($"{nameof(DiscountGrpcUrlEnv)} cannot be null or empty.");
+            }
+
             services.AddScoped<IBasketRepository, BasketRepository>();
+            services.AddGrpcClient<DiscountProtoService.DiscountProtoServiceClient>(options => options.Address = new Uri(grpcDiscountUrl));
+            services.AddScoped<DiscountGrpcService>();
+
 
             services.AddControllers();
             services.AddSwaggerGen();
