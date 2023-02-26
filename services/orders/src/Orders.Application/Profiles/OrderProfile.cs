@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Orders.Application.Models;
 using Orders.Domain.Entities;
 
 namespace Orders.Application.Profiles
@@ -7,9 +8,7 @@ namespace Orders.Application.Profiles
     {
         public OrderProfile()
         {
-            //CreateMap<Order, OrdersVm>().ReverseMap();
-            //CreateMap<Order, CheckoutOrderCommand>().ReverseMap();
-            //CreateMap<Order, UpdateOrderCommand>().ReverseMap();
+            CreateMap<Order, OrderDto>().ReverseMap();
         }
     }
 }
