@@ -8,7 +8,7 @@ namespace Orders.Application.Orders.Queries
     {
         public GetOrdersListQuery(string userName)
         {
-            UserName = userName ?? throw new ArgumentNullException(nameof(userName));
+            this.UserName = userName ?? throw new ArgumentNullException(nameof(userName));
         }
 
         public string UserName { get; set; }

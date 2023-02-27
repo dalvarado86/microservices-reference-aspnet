@@ -3,6 +3,7 @@
         <AutoMapperVersion>12.0.1</AutoMapperVersion>
         <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>12.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
         <DapperVersion>2.0.123</DapperVersion>
+        <FluentValidationVersion>11.5.1</FluentValidationVersion>
         <GrpcAspNetCoreVersion>2.51.0</GrpcAspNetCoreVersion>
         <MacrossJsonExtensionsVersion>3.0.0</MacrossJsonExtensionsVersion>
         <MicrosoftAspNetCoreHttpAbstractionsVersion>2.2.0</MicrosoftAspNetCoreHttpAbstractionsVersion>
