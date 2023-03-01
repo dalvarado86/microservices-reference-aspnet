@@ -2,8 +2,10 @@
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Orders.Application.Abstractions;
+using Orders.Application.Exceptions;
+using Orders.Application.Orders.Commands;
 
-namespace Orders.Application.Orders.Commands
+namespace Orders.Application.Orders.Handlers
 {
     public class UpdateOrderCommandHandler : IRequestHandler<UpdateOrderCommand, Unit>
     {
@@ -20,18 +22,18 @@ namespace Orders.Application.Orders.Commands
 
         public async Task<Unit> Handle(UpdateOrderCommand request, CancellationToken cancellationToken)
         {
-            var orderRequest = await this.orderRepository.GetByIdAsync(request.Id);
+            var orderRequest = await orderRepository.GetByIdAsync(request.Id);
 
             if (orderRequest == null)
             {
-                throw new InvalidOperationException($"Order {request.Id} doesn't exist.");
+                throw new NotFoundException(nameof(request.Id), request.Id);
             }
 
-            this.mapper.Map(request.Order, orderRequest);
+            mapper.Map(request.Order, orderRequest);
 
-            await this.orderRepository.UpdateAsync(orderRequest);
+            await orderRepository.UpdateAsync(orderRequest);
 
-            this.logger.LogInformation($"Order {orderRequest.Id} is successfully updated.");
+            logger.LogInformation($"Order {orderRequest.Id} is successfully updated.");
 
             return Unit.Value;
         }

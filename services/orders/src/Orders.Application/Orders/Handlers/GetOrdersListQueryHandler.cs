@@ -2,8 +2,9 @@
 using MediatR;
 using Orders.Application.Abstractions;
 using Orders.Application.Models;
+using Orders.Application.Orders.Queries;
 
-namespace Orders.Application.Orders.Queries
+namespace Orders.Application.Orders.Handlers
 {
     public class GetOrdersListQueryHandler : IRequestHandler<GetOrdersListQuery, List<OrderDto>>
     {
@@ -18,8 +19,8 @@ namespace Orders.Application.Orders.Queries
 
         public async Task<List<OrderDto>> Handle(GetOrdersListQuery request, CancellationToken cancellationToken)
         {
-            var orders = await this.orderRepository.GetOrderByUserNameAsync(request.UserName);
-            var result = this.mapper.Map<List<OrderDto>>(orders);
+            var orders = await orderRepository.GetOrderByUserNameAsync(request.UserName);
+            var result = mapper.Map<List<OrderDto>>(orders);
 
             return result;
         }

@@ -3,9 +3,10 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using Orders.Application.Abstractions;
 using Orders.Application.Models;
+using Orders.Application.Orders.Commands;
 using Orders.Domain.Entities;
 
-namespace Orders.Application.Orders.Commands
+namespace Orders.Application.Orders.Handlers
 {
     public class CheckoutOrderCommandHandler : IRequestHandler<CheckoutOrderCommand, int>
     {
@@ -28,10 +29,10 @@ namespace Orders.Application.Orders.Commands
 
         public async Task<int> Handle(CheckoutOrderCommand request, CancellationToken cancellationToken)
         {
-            var orderRequest = this.mapper.Map<Order>(request.Order);
-            var orderResponse =await this.orderRepository.AddAsync(orderRequest);
+            var orderRequest = mapper.Map<Order>(request.Order);
+            var orderResponse = await orderRepository.AddAsync(orderRequest);
 
-            this.logger.LogInformation($"Order has been create, Id: {orderResponse.Id}");
+            logger.LogInformation($"Order has been create, Id: {orderResponse.Id}");
 
             await SendMail(orderResponse);
 
@@ -49,11 +50,11 @@ namespace Orders.Application.Orders.Commands
 
             try
             {
-                await this.emailService.SendEmailAsync(email);
+                await emailService.SendEmailAsync(email);
             }
             catch (Exception ex)
             {
-                this.logger.LogError(ex, $"Send maild failed, {nameof(order.Id)}: {order.Id}.");
+                logger.LogError(ex, $"Send maild failed, {nameof(order.Id)}: {order.Id}.");
             }
         }
     }
