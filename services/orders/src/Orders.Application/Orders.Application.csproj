@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="AutoMapper" Version="$(AutoMapperVersion)" />
-    <PackageReference Include="FluentValidation" Version="$(FluentValidationVersion)" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="$(AutoMapperExtensionsMicrosoftDependencyInjectionVersion)" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="$(FluentValidationDependencyInjectionExtensionsVersion)" />
     <PackageReference Include="MediatR" Version="$(MediatrVersion)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(MicrosoftExtensionsLoggingAbstractionsVersion)" />
   </ItemGroup>
