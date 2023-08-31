@@ -5,11 +5,11 @@ namespace Orders.Application.Orders.Commands
 {
     public class CheckoutOrderCommand : IRequest<int>
     {
-        public CheckoutOrderCommand(OrderDto order)
+        public CheckoutOrderCommand(OrderVm order)
         {
             this.Order = order ?? throw new ArgumentNullException(nameof(order));
         }
 
-        public OrderDto Order { get; set; }
+        public OrderVm Order { get; set; }
     }
 }
