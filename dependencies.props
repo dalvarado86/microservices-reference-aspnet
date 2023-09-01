@@ -1,28 +1,31 @@
 <Project>
     <PropertyGroup Label="Package Versions">
         <AutoMapperVersion>12.0.1</AutoMapperVersion>
-        <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>12.0.0</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>
-        <DapperVersion>2.0.123</DapperVersion>
-        <FluentValidationVersion>11.5.1</FluentValidationVersion>
-        <FluentValidationDependencyInjectionExtensionsVersion>11.5.1</FluentValidationDependencyInjectionExtensionsVersion>
-        <GrpcAspNetCoreVersion>2.51.0</GrpcAspNetCoreVersion>
+        <AutoMapperExtensionsMicrosoftDependencyInjectionVersion>12.0.1</AutoMapperExtensionsMicrosoftDependencyInjectionVersion>        
+        <DapperVersion>2.0.151</DapperVersion>
+        <FluentValidationVersion>11.7.1</FluentValidationVersion>
+        <FluentValidationDependencyInjectionExtensionsVersion>11.7.1</FluentValidationDependencyInjectionExtensionsVersion>
+        <GrpcAspNetCoreVersion>2.56.0</GrpcAspNetCoreVersion>
         <MacrossJsonExtensionsVersion>3.0.0</MacrossJsonExtensionsVersion>
         <MicrosoftAspNetCoreHttpAbstractionsVersion>2.2.0</MicrosoftAspNetCoreHttpAbstractionsVersion>
-        <MicrosoftExtensionsCachingStackExchangeRedisVersion>7.0.2</MicrosoftExtensionsCachingStackExchangeRedisVersion>
-        <MicrosoftExtensionsHostingAbstractionsVersion>7.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
-        <MicrosoftExtensionsLoggingAbstractionsVersion>7.0.0</MicrosoftExtensionsLoggingAbstractionsVersion>
-        <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.17.0</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
-        <MediatrVersion>12.0.1</MediatrVersion>
-        <MongoDBDriverVersion>2.18.0</MongoDBDriverVersion>
+        <MicrosoftAspNetCoreOpenApiVersion>7.0.10</MicrosoftAspNetCoreOpenApiVersion>
+        <MicrosoftEntityFrameworkCoreVersion>7.0.10</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftExtensionsCachingStackExchangeRedisVersion>7.0.10</MicrosoftExtensionsCachingStackExchangeRedisVersion>
+        <MicrosoftExtensionsHostingAbstractionsVersion>7.0.10</MicrosoftExtensionsHostingAbstractionsVersion>
+        <MicrosoftExtensionsLoggingAbstractionsVersion>7.0.10</MicrosoftExtensionsLoggingAbstractionsVersion>
+        <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.19.5</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
+        <MediatrVersion>12.1.1</MediatrVersion>
+        <MongoDBDriverVersion>2.21.0</MongoDBDriverVersion>
         <NewtonsoftJsonVersion>13.0.1</NewtonsoftJsonVersion>
         <NpgsqlVersion>7.0.1</NpgsqlVersion>
+        <SendGridVersion>9.28.1</SendGridVersion>
         <SwashbuckleAspNetCoreVersion>6.5.0</SwashbuckleAspNetCoreVersion>
     </PropertyGroup>
 
     <PropertyGroup Label="Test Packages">
-        <CoverletCollectorVersion>3.2.0</CoverletCollectorVersion>
-        <FluentAssertionsVersion>6.9.0</FluentAssertionsVersion>
-        <MicrosoftNETTestSdkVersion>17.4.1</MicrosoftNETTestSdkVersion>
+        <CoverletCollectorVersion>6.0.0</CoverletCollectorVersion>
+        <FluentAssertionsVersion>6.12.0</FluentAssertionsVersion>
+        <MicrosoftNETTestSdkVersion>17.7.2</MicrosoftNETTestSdkVersion>
         <MoqVersion>4.18.4</MoqVersion>
         <NUnitVersion>3.13.3</NUnitVersion>
         <NUnit3TestAdapterVersion>4.3.1</NUnit3TestAdapterVersion>
