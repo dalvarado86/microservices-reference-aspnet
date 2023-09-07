@@ -10,7 +10,9 @@
         <MicrosoftAspNetCoreHttpAbstractionsVersion>2.2.0</MicrosoftAspNetCoreHttpAbstractionsVersion>
         <MicrosoftAspNetCoreOpenApiVersion>7.0.10</MicrosoftAspNetCoreOpenApiVersion>
         <MicrosoftEntityFrameworkCoreVersion>7.0.10</MicrosoftEntityFrameworkCoreVersion>
+        <MicrosoftEntityFrameworkCoreSqlServerVersion>7.0.10</MicrosoftEntityFrameworkCoreSqlServerVersion>
         <MicrosoftExtensionsCachingStackExchangeRedisVersion>7.0.10</MicrosoftExtensionsCachingStackExchangeRedisVersion>
+        <MicrosoftExtensionsConfigurationAbstractionsVersion>7.0.0</MicrosoftExtensionsConfigurationAbstractionsVersion>
         <MicrosoftExtensionsHostingAbstractionsVersion>7.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
         <MicrosoftExtensionsLoggingAbstractionsVersion>7.0.1</MicrosoftExtensionsLoggingAbstractionsVersion>
         <MicrosoftVisualStudioAzureContainersToolsTargetsVersion>1.19.5</MicrosoftVisualStudioAzureContainersToolsTargetsVersion>
