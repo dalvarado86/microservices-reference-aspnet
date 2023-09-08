@@ -1,3 +1,5 @@
+using Ordering.Infrastructure.Persistence;
+using Orders.API.Extensions;
 using Orders.Application;
 using Orders.Infrastructure;
 
@@ -24,7 +26,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
-
 app.MapControllers();
+
+// Add migration and seed data
+app.MigrateDatabase<OrderContext>(async (context, services) =>
+{
+    var logger = services.GetRequiredService<ILogger<OrderContextSeed>>();
+    await OrderContextSeed.SeedAsync(context, logger);
+}, retry: 5);
 
 app.Run();

@@ -11,6 +11,7 @@
         <MicrosoftAspNetCoreOpenApiVersion>7.0.10</MicrosoftAspNetCoreOpenApiVersion>
         <MicrosoftEntityFrameworkCoreVersion>7.0.10</MicrosoftEntityFrameworkCoreVersion>
         <MicrosoftEntityFrameworkCoreSqlServerVersion>7.0.10</MicrosoftEntityFrameworkCoreSqlServerVersion>
+        <MicrosoftEntityFrameworkCoreToolsVersion>7.0.10</MicrosoftEntityFrameworkCoreToolsVersion>
         <MicrosoftExtensionsCachingStackExchangeRedisVersion>7.0.10</MicrosoftExtensionsCachingStackExchangeRedisVersion>
         <MicrosoftExtensionsConfigurationAbstractionsVersion>7.0.0</MicrosoftExtensionsConfigurationAbstractionsVersion>
         <MicrosoftExtensionsHostingAbstractionsVersion>7.0.0</MicrosoftExtensionsHostingAbstractionsVersion>
