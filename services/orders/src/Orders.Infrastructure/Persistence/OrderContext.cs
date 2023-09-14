@@ -31,5 +31,12 @@ namespace Ordering.Infrastructure.Persistence
 
             return base.SaveChangesAsync(cancellationToken);
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Order>()
+                .Property(o => o.TotalPrice)
+                .HasColumnType("decimal(18, 2)"); // Adjust precision and scale as needed
+        }
     }
 }

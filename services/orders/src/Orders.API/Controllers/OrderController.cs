@@ -7,11 +7,16 @@ using System.Net;
 
 namespace Orders.API.Controllers
 {
-    [ApiController]
-    [Route("api/v1/[controller]")]
+    //[ApiController]
+    //[Route("api/v1/[controller]")]
+    /// <summary>
+    /// This controller is deprecated. Use the <see cref="Endpoints.OrderEndpoints"/> instead.
+    /// </summary>
+    [Obsolete("This class is deprecated. Use the <see cref=\"Endpoints.OrderEndpoints\"/> instead.")]
     public class OrderController : ControllerBase
     {
         private readonly IMediator mediator;
+        
 
         public OrderController(IMediator mediator)
         {

@@ -1,4 +1,5 @@
 using Ordering.Infrastructure.Persistence;
+using Orders.API.Endpoints;
 using Orders.API.Extensions;
 using Orders.Application;
 using Orders.Infrastructure;
@@ -29,10 +30,14 @@ app.UseAuthorization();
 app.MapControllers();
 
 // Add migration and seed data
-app.MigrateDatabase<OrderContext>(async (context, services) =>
+app.MigrateDatabase<OrderContext>((context, services) =>
 {
     var logger = services.GetRequiredService<ILogger<OrderContextSeed>>();
-    await OrderContextSeed.SeedAsync(context, logger);
+    OrderContextSeed.SeedAsync(context, logger).Wait();
 }, retry: 5);
+
+// Order Endpoints definition
+app.ConfigureOrderEndpoints();
+app.UseHttpsRedirection();
 
 app.Run();
