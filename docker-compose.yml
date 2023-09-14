@@ -10,6 +10,9 @@ services:
   discountdb:
     image: postgres
 
+  orderdb:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+
   portainer:
     image: portainer/portainer-ce
 
@@ -37,8 +40,13 @@ services:
       context: .
       dockerfile: services/discount/src/Discount.Grpc/Dockerfile
 
+  orders.api:
+    image: ${DOCKER_REGISTRY-}ordersapi
+    build:
+      context: .
+      dockerfile: services/orders/src/Orders.API/Dockerfile
+
 volumes:
   mongo_data:
   portainer_data:
   postgres_data:
-

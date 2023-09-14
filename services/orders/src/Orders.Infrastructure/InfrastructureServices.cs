@@ -15,6 +15,7 @@ namespace Orders.Infrastructure
         {
             const string DbConnectionSection = "OrdersConnectionString";
             const string EmailSettingsSection = "EmailSettings";
+
             services.AddDbContext<OrderContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString(DbConnectionSection)));
 
